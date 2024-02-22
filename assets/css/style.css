@@ -115,3 +115,29 @@ form .option :before {
  transform: translateY(-50%);
  border-radius: 50px;
 }
+
+.fblink {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.fblink span {
+    font-size: 18px;
+    color: #021897;
+    margin-right: 5px;
+}
+
+.fblink a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forget-id {
+ margin: 15px;
+}
+
+.forget-id a{
+    text-decoration: none;
+    
+}
+
