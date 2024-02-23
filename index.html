@@ -6,31 +6,63 @@
     <title>Instbook Log in form</title>
     <link rel="stylesheet"  type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesone/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2015/05/22/11/49/facebook-778706_1280.png"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <main>
+       <nav class="navbar">
+           <div class="container-fluid">
+               <img src="https://cdn.pixabay.com/photo/2015/05/22/11/49/facebook-778706_1280.png" alt="logo">
+            </div>
+        </nav>
+    </main>
+    <br>
+    <br>
+    <br>
     <div class="container">
-        <div class="text">Log in to Continue</div>
-        <div class="page">
-            <div class="title">INSTBOOK</div>
-            <form>
-                <input type="text" placeholder="Phone number, username, or email">
-                <input type="password" placeholder="Password">
-                <button>Log in</button>
-                <div class="option">Or</div>
-            </form>
-            <div class="fblink"></div>
-            <span class="fab fa-google"></span>
-            <a href="#"> Log in with Google</a>
-        </div>
-        <div class="forget-id">
-            <a href="#">Forget password?</a>
-        </div>
-        <div class="signup">
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+        <div class="text">Inicia sesión para continuar</div>
+        <br>
+            <div class="tarjeta">
+                <div class="title">Instbook</div>
+                     <form class="login">
+                        <input type="text" placeholder="Nombre de usuario o correo electrónico">
+                        <input type="password" placeholder="Contraseña">
+                        <br>
+                        <a href="#" class="btn-neon"> 
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                            Acceder
+                        </a>
+                        <br>
+                        <div class="option">O</div>
+                     </form>
+                     <div class="fblink"></div>
+                     <span class="fab fa-google"></span>
+                     <button class="btn-google" type="button" href="#">Accede con Google</button>
+
+                     <div class="fblink"></div>                    
+                     <span class="fab fa-facebook"></span>
+                     <button class="btn-facebook" type="button" href="#">Accede con Facebook</button>
+                     <br>
+                     <br>
+                     <div class="forget-id">
+                         <a href="#">¿Olvidaste tu contraseña?</a>
+                     </div>
+                     <br>
+
+                    <div class="signup">
+                        <p>¿No tienes cuenta?</p>
+                        <br>
+                        <button class="btn-registrar" type="button" href="#">Regístrate</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

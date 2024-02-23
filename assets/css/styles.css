@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fb009f, #ee6868, #8e5de6, #a5dcf0);
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #eb8ceb; 
+    padding: 10px 20px; 
+}
+  
+.navbar img {
+    height: 40px; 
+    width: auto; 
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin-top: 30px;
+}
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+text {
+    color: #fff;
+    letter-spacing: 5px;
+    margin: 10px ;
+}
+
+.tarjeta {
+    width: 330px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    box-shadow: inset 16px 14px 20px #fff;
+}
+
+.title {
+    font-family: Cookie;
+    font-size: 45px;
+    padding: 30px 0;
+}
+
+form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+form input {
+    margin-bottom: 5px;
+    border: 1px solid rgb(140, 202, 253);
+    border-radius: 3px;
+    outline: #a5dcf0;
+}
+
+form input:focus {
+    border: 1px solid rgb(140, 202, 253);
+    background-color: #f5c7e3;
+}
+
+input[type="text"], input[type="password"] {
+    padding-left: 10px;
+    position: relative;
+    height: 35px;
+    font-size: 17px;
+}  
+
+input::placeholder {
+    font-weight: normal;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+input:focus::placeholder {
+    position: absolute;
+    font-size: 10px;
+    transform: translateY(-8px);
+}
+
+.btn-neon {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #dd72b4;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.btn-neon:hover {
+    background: #e411c88c;
+    transition-delay: ls ;
+}
+
+.btn-neon span {
+    position: absolute;
+    display: block;
+}
+
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(98deg,transparent,#8d199c);
+}
+
+.btn-neon:hover #span1 {
+    left: 100%;
+    transition: 2s;
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#8d199c);
+}
+
+.btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay:0.5s ;
+}
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#8d199c);
+}
+
+.btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay:0.25s ;
+}
+
+#span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#8d199c);
+}
+
+.btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay:0.75s ;
+}
+
+
+form .option {
+    margin: 5px 0;
+    font-weight: bold;
+    position: relative;
+}
+
+.btn-google {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid plum;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-google:hover {
+    background-color: rgb(76, 76, 230);
+}
+
+.btn-facebook {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid plum;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-facebook:hover {
+    background-color: rgb(76, 76, 230);
+}
+ .btn-registrar {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid plum;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forget-id {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.signup {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.btn-registrar:hover {
+    background-color: #dd72b4;
+}
+
+.fblink {
+    margin-top: 15px;
+    width: 100%;
+}
