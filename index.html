@@ -13,71 +13,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <img src="assets/img/logo.png" alt="logo">
-            <a class="navbar-brand" href="#">Instbook</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link-inicio" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal">Iniciar Sesión</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link-registro" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Registrarse</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link-logged-in" id="logout" href="#">Cerrar Sesión</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-       <!-- Iniciar Sesion -->
-  <div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content bg-dark">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Inicia Sesión</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="signin-form">
-            <label for="email-signin" class="mb-1 text-light">Correo</label>
-            <input id="email-signin" type="email" class="form-control mb-3" placeholder="Correo electrónico" required>
-            <label for="password-signin" for="password-signin" class="mb-1 text-light">Contraseña</label>
-            <input id="password-signin" type="password" class="form-control mb-3" placeholder="**" required>
-            <button type="submit" class="btn btn-indigo form-control mb-2 text-dark">Iniciar Sesión</button>
-            <hr />
-            <button id="google-login" class="btn btn-indigo">Google</button>
-          </form>
-        </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <img src="assets/img/logo.png" alt="logo">
+        <a class="navbar-brand" href="#">Instbook</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link-inicio" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-registro" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-logged-in" id="logout" href="#">Cerrar Sesión</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
+     <!-- Iniciar Sesion -->
+<div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable d-flex justify-content-center align-items-end">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">
+        <i class="bi bi-person">
+          Inicia Sesión</i>
+      </h1>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form id="signin-form">
+        <label for="email-signin" class="mb-1 text-light">
+          <i class="bi bi-envelope-at">
+            Correo</i>
+        </label>
+        <input id="email-signin" type="email" class="form-control mb-3" placeholder="Correo electrónico" required>
+        <label for="password-signin" for="password-signin" class="mb-1 text-light">
+          <i class="bi bi-bag-dash">
+            Contraseña</i>
+        </label>
+        <input id="password-signin" type="password" class="form-control mb-3" placeholder="*" required>
+        <button type="submit" class="btn btn-indigo form-control mb-2 text-dark">Iniciar Sesión</button>
+        <hr class="text-light"/>
+        <button id="google-login" class="btn btn-indigo">
+          <i class="bi bi-google">
+            Google</i>
+        </button>
+      </form>
+    </div>
   </div>
+</div>
+</div>
 
-  <!-- Registrarse modal -->
-  <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content bg-dark">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Regístrate</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="signup-form">
-            <label for="email-signup" class="mb-1 text-light">Correo</label>
-            <input id="email-signup" type="email" class="form-control mb-3" placeholder="Correo Electrónico" required>
-            <label for="password-signup" class="mb-1 text-light">Contraseña</label>
-            <input id="password-signup" type="password" class="form-control mb-3" placeholder="**" required>
-            <button type="submit" class="btn btn-indigo">Registrarse</button>
-          </form>
-        </div>
-      </div>
+<!-- Registrarse modal -->
+<div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">
+        <i class="bi bi-person">
+          Regístrate</i>
+      </h1>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form id="signup-form">
+        <label for="email-signup" class="mb-1 text-light">
+          <i class="bi bi-envelope-at">
+            Correo</i>
+        </label>
+        <input id="email-signup" type="email" class="form-control mb-3" placeholder="Correo Electrónico" required>
+        <label for="password-signup" class="mb-1 text-light">
+          <i class="bi bi-bag-dash">
+            Contraseña</i>
+        </label>
+        <input id="password-signup" type="password" class="form-control mb-3" placeholder="*" required>
+
+        <label for="usuario-signup" class="mb-1 text-light">
+          <i class="bi bi-person-circle">
+            Nombre de Usuario
+          </i>
+        </label>
+        <input id="usuario-signup" type="usuario" class="form-control mb-3" placeholder="Ej: Anx12" required>
+
+        <label for="password2-signup" class="mb-1 text-light">
+          <i class="bi bi-bag-check">
+            Contraseña
+          </i>
+        </label>
+        <input id="password2-signup" type="password2" class="form-control mb-3" placeholder="*" required>
+        <button type="submit" class="btn btn-indigo">Registrarse</button>
+      </form>
     </div>
   </div>
+</div>
+</div>
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

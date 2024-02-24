@@ -21,32 +21,40 @@ body {
 }
   
 .navbar img {
-    height: 45px; 
+    height: 50px; 
     width: auto; 
 }
 
 .navbar-brand {
     font-family: Cookie;
     font-size: 35px;
-    padding-left: 20px;
-}
-
-button {
-    background: linear-gradient(#ee6868, #eb8ceb);
+    padding-left: 15px;
 }
 
 .nav-link-inicio,
 .nav-link-registro {
-    padding: 5px 15px; 
+    padding: 5px 15px; /* Aumentamos el padding para mejorar la accesibilidad en dispositivos móviles */
     margin-right: 10px;
-    font-size: 16px; 
-    background-color:  #fb009f; 
-    color: rgb(15, 15, 15); 
-    border-radius: 5px; 
-    transition: background-color 0.3s, color 0.3s; 
-    text-decoration: none;  
+    font-size: 16px;
+    background-color: #fb009f;
+    color: rgb(15, 15, 15);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    display: inline-block; /* Para que los botones se ajusten automáticamente al ancho del contenido */
 }
 
+/* Reglas de diseño responsivo */
+@media (max-width: 768px) {
+    .nav-link-inicio,
+    .nav-link-registro,
+    .nav-link-logged-in {
+        margin-right: 0; /* Eliminamos el margen derecho en dispositivos móviles */
+        margin-bottom: 10px; /* Agregamos un margen inferior para separar los botones en dispositivos móviles */
+        display: block; /* Para que los botones se muestren en líneas separadas en dispositivos móviles */
+        width: 100%; /* Hacemos que los botones ocupen el ancho completo del contenedor en dispositivos móviles */
+    }
+}
 .nav-link-inicio:hover,
 .nav-link-registro:hover {
     background-color: #fb009f8f;
@@ -54,15 +62,42 @@ button {
 
 .nav-link-logged-in {
     padding: 5px 15px; 
-    margin-right: 10px;
+    margin-right:10px;
     font-size: 16px; 
     background-color:  #a13cff; 
     color: rgb(15, 15, 15); 
     border-radius: 5px; 
     transition: background-color 0.3s, color 0.3s; 
-    text-decoration: none;  
+    text-decoration: none; 
+    display: inline-block; /* Para que los botones se ajusten automáticamente al ancho del contenido */ 
 }
 
 .nav-link-logged-in:hover {
     background-color: #bb56ff;
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #eb8ceb; 
+    
+}
+
+
+button {
+    background: linear-gradient(#ff2e96, #ff85ff);
+}
+
+.modal-content {
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 2px solid rgb(214, 28, 90);
+    backdrop-filter: blur (10px) ;
+}
+
+.btn-close-white {
+    color: #fff1f1; 
 }
