@@ -1,41 +1,43 @@
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"
-import {auth} from './firebase.js';
-import {showMessage} from "./show_message.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { auth } from './firebase.js';
+import { showMessage } from './show_message.js';
 
-const signupForm = document.querySelector('#signup-form')
+const signupForm = document.querySelector('#signup-form');
 
 signupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const email = signupForm['signup-email'].value;
-    const password = signupForm['signup-password'].value;
+    const usuario = signupForm['usuario-signup'].value;
+    const email = signupForm['email-signup'].value;
+    const password = signupForm['password-signup'].value;
 
-    console.log(email, password);
+    console.log(email, usuario, password);
 
     try {
-        const userCredentials = await createUserWithEmailAndPassword(auth, email, password)
-        console.log(userCredentials)
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        console.log(userCredential);
+        userCredential.user.displayName = usuario;
 
-        const signupModal = document.getElementById('#signup-modal')
-        const modal = bootstrap.Modal.getInstance(signupModal);
-        modal.hide()
+        console.log(userCredential);
 
-        show_message("Welcome" + userCredentials.user.email)
+        console.log('Usuario registrado correctamente');
+        
+    showMessage("Bienvenido " + userCredential.user.displayName)
 
     } catch (error) {
-        if (error.code === 'auth/email-already-in-use') {
-            showMessage('Email already in use', 'red');
-        } 
-        else if (error.code === 'auth/invalid-email'){
-            showMessage('Invalide email', 'red');
-        }
-        else if (error.code === 'auth/weak-password'){
-            showMessage('Weak password', 'red');
-        }
-        else {
-            showMessage('Something went wrong', 'red');
-            
-        } 
-    }
+        console.error('Error al registrar usuario:', error);
+        console.log(error.menssege)
+        console.log(error.code)
 
-})
+        if (error.code === 'auth/email-already-in-use'){
+            showMessage("Email usado", "error")
+        }
+        else if(error.code === 'auth/invalid-email'){
+            showMessage("Email invalido", "error")
+        } else if (error.code === 'auth/weak-password'){
+            showMessage("Contraseña Debil", "error")
+        } else if (error.code){
+            showMessage("Algo fallo", "error")
+        }
+    }
+});

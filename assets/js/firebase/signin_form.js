@@ -1,34 +1,30 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"
-import {auth} from './firebase.js'
-import {showMessage} from "./show_message.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { auth } from "./firebase.js";
+import { showMessage } from './show_message.js';
 
-const signInForm = document.querySelector('#login-form')
+const signinForm = document.querySelector("#signin-form");
+signinForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-signInForm.addEventListener('submit', async (e) => {
-    e.preventDefault(); 
+    const email = signinForm["email-signin"].value;
+    const password = signinForm["password-signin"].value;
 
-    const email = signInForm['login-email'].value;
-    const password = signInForm['login-password'].value;
- 
     try {
-        const userCredentials = await signInWithEmailAndPassword(auth, email, password)
-        console.log(userCredentials)
+        const userCredentials = await signInWithEmailAndPassword(auth, email, password);
+        console.log(userCredentials);
 
-        const modal = bootstrap.Modal.getInstance(document.querySelector('signin-modal'));
-        signInForm.reset();
-        modal.hide();
-
-        show_message("Welcome" + userCredentials.user.email)
+        showMessage("Welcome de nuevo ", "success");
 
     } catch (error) {
         if (error.code === 'auth/wrong-password') {
-            showMessage('Wrong password', 'red');
+            showMessage('Contraseña incorrecta', 'red');
         } 
         else if (error.code === 'auth/user-not-found'){
-            showMessage('User not found', 'red');
+            showMessage('Usuario no encontrado', 'red');
         }
         else {
-            showMessage(error.message, 'error');  
+            showMessage(error.message, "Algo salió mal", "error");  
         } 
     }
-})
+});
+
