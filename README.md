@@ -1,1 +1,1 @@
-<em> Instbook </em>
+<h1 align="center"> Instbook </h1>
