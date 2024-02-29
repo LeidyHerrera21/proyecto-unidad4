@@ -1,5 +1,5 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { auth } from './firebase.js';
+import { auth, firestore } from './firebase.js';
 import { showMessage } from './show_message.js';
 
 const signupForm = document.querySelector('#signup-form');
@@ -23,6 +23,10 @@ signupForm.addEventListener('submit', async (e) => {
         console.log('Usuario registrado correctamente');
         
     showMessage("Bienvenido " + userCredential.user.displayName)
+
+    setTimeout(() => {
+        window.location.href = "principal.html";
+    }, 2000);
 
     } catch (error) {
         console.error('Error al registrar usuario:', error);

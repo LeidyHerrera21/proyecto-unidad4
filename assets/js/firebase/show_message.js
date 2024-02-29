@@ -1,4 +1,5 @@
-export function showMessage(message, color) {
+export function showMessage(message, type = "success"){
+    
   Toastify({
       text: message,
       duration: 3000,
@@ -9,8 +10,8 @@ export function showMessage(message, color) {
       position: "right", // `left`, `center` or `right`
       stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
-        background: color, 
+          background: type === 'success' ? "blue" : "purple"
       },
       onClick: function(){} // Callback after click
-    }).showToast();
+  }).showToast();
 }

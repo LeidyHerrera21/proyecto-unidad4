@@ -5,12 +5,17 @@
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(135deg, #fb009f, #ee6868, #8e5de6, #a5dcf0);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/comparte\ \(1\).png);
+    min-height: 100vh;
 }
+
+
 .navbar {
     position: fixed;
     top: 0;
@@ -44,23 +49,12 @@ body {
     display: inline-block; /* Para que los botones se ajusten automáticamente al ancho del contenido */
 }
 
-/* Reglas de diseño responsivo */
-@media (max-width: 768px) {
-    .nav-link-inicio,
-    .nav-link-registro,
-    .nav-link-logged-in {
-        margin-right: 0; /* Eliminamos el margen derecho en dispositivos móviles */
-        margin-bottom: 10px; /* Agregamos un margen inferior para separar los botones en dispositivos móviles */
-        display: block; /* Para que los botones se muestren en líneas separadas en dispositivos móviles */
-        width: 100%; /* Hacemos que los botones ocupen el ancho completo del contenedor en dispositivos móviles */
-    }
-}
 .nav-link-inicio:hover,
 .nav-link-registro:hover {
     background-color: #fb009f8f;
 }
 
-.nav-link-logged-in {
+.nav-link-logged-out {
     padding: 5px 15px; 
     margin-right:10px;
     font-size: 16px; 
@@ -93,11 +87,38 @@ button {
 
 .modal-content {
     transition: 0.5s;
-    background-color: rgb(255, 255, 255, 0.1);
+    background-color: rgba(90, 90, 90, 0.527);
     border: 2px solid rgb(214, 28, 90);
     backdrop-filter: blur (10px) ;
 }
+.nav-link-login{
+    text-decoration: none;
+    color: #000000;
+}
+
 
 .btn-close-white {
     color: #fff1f1; 
+}
+
+/* Reglas de diseño responsivo */
+@media (max-width: 768px) {
+    .nav-link-inicio,
+    .nav-link-registro,
+    .nav-link-logged-in {
+        margin-right: 0; /* Eliminamos el margen derecho en dispositivos móviles */
+        margin-bottom: 10px; /* Agregamos un margen inferior para separar los botones en dispositivos móviles */
+        display: block; /* Para que los botones se muestren en líneas separadas en dispositivos móviles */
+        width: 100%; /* Hacemos que los botones ocupen el ancho completo del contenedor en dispositivos móviles */
+    }
+}
+
+/* Reglas para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .container-img {
+        background-size: contain; /* Ajusta el tamaño para que la imagen se ajuste dentro del contenedor */
+        height: 50vh; /* Reducimos la altura en dispositivos más pequeños */
+        margin-top: 50px; /* Reducimos el margen superior */
+        margin-bottom: 10px; /* Reducimos el margen inferior */
+    }
 }
